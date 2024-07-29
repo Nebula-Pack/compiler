@@ -1,5 +1,5 @@
-mod parse;
 use std::env;
+use your_project_name::parse::extract_dependencies;
 
 fn main() {
     let current_dir = env::current_dir().expect("Failed to get current directory");
@@ -12,5 +12,5 @@ fn main() {
     println!("Project folder: {}", project_folder_str);
     println!("Output folder: {}", output_folder_str);
 
-    parse::extract_dependencies::find_and_replace_requires(project_folder_str, output_folder_str);
+    extract_dependencies::find_and_replace_requires(project_folder_str, output_folder_str);
 }
